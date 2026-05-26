@@ -7,7 +7,7 @@
   <style>
     :root{--bg:#eef3f7;--card:#fff;--soft:#f7fafc;--text:#162131;--muted:#64748b;--border:#d8e2ee;--accent:#1e3a5f;--success:#0f9f62;--purple:#6d28d9;--warning:#d97706;--danger:#dc2626;--shadow:0 14px 32px rgba(15,23,42,.08)}
     *{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;background:linear-gradient(135deg,#eef3f7,#f8fafc);color:var(--text)}.screen{width:1180px;margin:0 auto;padding:24px}.card{background:var(--card);border:1px solid var(--border);border-radius:24px;padding:18px;box-shadow:var(--shadow);margin-bottom:16px}
-    header{background:linear-gradient(135deg,#17212d,#243447);border-radius:24px;padding:22px 28px;box-shadow:var(--shadow);margin-bottom:16px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;color:#fff}.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#a7c7f7;margin-bottom:8px;font-weight:900}h1{margin:0;font-size:34px;line-height:1.04}header p{max-width:850px;margin:8px 0 0;color:#d7e3f1;font-size:16px;line-height:1.45}.header-badge{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:14px 18px;min-width:245px;text-align:center}.header-badge .rate{font-size:28px;font-weight:900}.header-badge .caption{font-size:12px;margin-top:6px;color:#d7e3f1;line-height:1.35}
+    header{background:linear-gradient(135deg,#17212d,#243447);border-radius:24px;padding:22px 28px;box-shadow:var(--shadow);margin-bottom:16px;color:#fff}.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#a7c7f7;margin-bottom:8px;font-weight:900}h1{margin:0;font-size:34px;line-height:1.04}header p{max-width:850px;margin:8px 0 0;color:#d7e3f1;font-size:16px;line-height:1.45}.header-badge{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:14px 18px;min-width:245px;text-align:center}.header-badge .rate{font-size:28px;font-weight:900}.header-badge .caption{font-size:12px;margin-top:6px;color:#d7e3f1;line-height:1.35}
     .section-title{display:flex;justify-content:space-between;align-items:flex-end;gap:18px;margin-bottom:12px}.section-title h2{margin:0;font-size:21px;color:var(--accent)}.intro-line{color:var(--muted);margin:0;line-height:1.35;font-size:13px;text-align:right;max-width:650px}
     .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.grid-5{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.grid-6{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
     .input-card,.rec-card,.manual-card,.summary-card{background:var(--soft);border:1px solid var(--border);border-radius:16px;padding:9px;transition:.15s}.input-card.active,.manual-card.active{background:#fff;border-color:rgba(30,58,95,.45);box-shadow:0 10px 20px rgba(30,58,95,.08)}.input-card.super{background:#f4f8fc;border-color:#b9c9dc}.input-card.eco{background:#f8fbf7;border-color:#c7ddc9}.input-card.strategic{background:#fbfaf7;border-color:#e4d7bb}.name{display:block;color:var(--accent);font-size:13px;font-weight:900;line-height:1.15}.hint{display:block;color:var(--muted);font-size:10.5px;line-height:1.2;margin-top:3px}.input-card .hint{min-height:22px}.input-card input{margin-top:6px}
@@ -213,56 +213,7 @@
 /* FRANJA SUPERIOR DEFINITIVA - TARJETAS ANÁLISIS */
 /* ================================================= */
 
-.top-cards-grid{
-  display:grid;
-  grid-template-columns:repeat(6,minmax(0,1fr));
-  gap:14px;
-  width:100%;
-  align-items:stretch;
-}
 
-.card-mini{
-  height:104px;
-  border-radius:20px;
-  padding:16px 18px;
-  background:linear-gradient(135deg,#1f3550,#30537e);
-  border:1px solid rgba(255,255,255,.08);
-  color:#fff;
-  box-shadow:0 8px 18px rgba(15,23,42,.08);
-  display:grid;
-  grid-template-rows:1fr auto;
-}
-
-.card-name{
-  align-self:start;
-  font-size:14px;
-  font-weight:800;
-  line-height:1.15;
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
-}
-
-.card-footer{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-end;
-  gap:14px;
-  font-size:12px;
-  font-weight:800;
-  line-height:1;
-}
-
-.card-footer span:last-child{
-  font-weight:900;
-  letter-spacing:.06em;
-}
-
-@media(max-width:1200px){
-  .top-cards-grid{
-    grid-template-columns:1fr;
-  }
-}
 
 
 
@@ -762,8 +713,7 @@
 }
 .public-disclaimer strong{color:#9a3412!important;}
 .membership-toggle input{margin:0;}
-@media(max-width:1200px){
-  }
+
 @media print{
   .public-disclaimer{
     display:block!important;
@@ -940,21 +890,57 @@
   }
 }
 
+/* ===== Simulación vacía (placeholder) ===== */
+.summary-card.sim-vacia{display:flex;flex-direction:column}
+.sim-vacia-msg{margin-top:6px;font-size:12px;line-height:1.45;color:#64748b;font-weight:600}
+
+/* ===== Aviso de total ajustado ===== */
+.total-ajuste-aviso{margin:8px 0 4px;padding:8px 12px;border-radius:10px;
+  background:#fff7ed;border:1px dashed #fdba74;color:#9a3412;
+  font-size:11.5px;font-weight:800;line-height:1.3}
+
+/* ===== Strip de tarjetas: píldoras compactas ===== */
+.card-pills{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.card-pill{display:flex;align-items:baseline;gap:8px;
+  background:linear-gradient(135deg,#1f3550,#30537e);
+  border:1px solid rgba(255,255,255,.08);border-radius:11px;
+  padding:9px 14px;color:#fff;min-width:0}
+.card-pill .cp-name{font-weight:800;font-size:12.5px;line-height:1;white-space:nowrap;flex:none}
+.card-pill .cp-meta{font-size:10px;font-weight:700;letter-spacing:.03em;
+  color:rgba(255,255,255,.62);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media print{.card-pills{display:none!important}}
+
+/* ===== Rubros opcionales colapsables ===== */
+.rubro-ayuda{font-size:12px;color:#64748b;margin:0 0 10px;font-style:italic}
+.rubro-chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 6px}
+.rubro-chip{display:flex;flex-direction:column;align-items:flex-start;gap:3px;
+  background:#fff;border:1.5px dashed #c4d3e6;border-radius:12px;
+  padding:10px 13px;cursor:pointer;text-align:left;transition:all .15s;
+  width:212px;max-width:100%}
+.rubro-chip:hover{border-color:#1e3a5f;border-style:solid;background:#f4f8fc}
+.rubro-chip .rc-head{display:flex;align-items:center;gap:7px}
+.rubro-chip .rc-plus{display:inline-flex;align-items:center;justify-content:center;
+  width:18px;height:18px;border-radius:50%;background:#1e3a5f;color:#fff;
+  font-weight:900;font-size:13px;line-height:1;flex:none}
+.rubro-chip .rc-name{font-weight:800;font-size:12.5px;color:#162131}
+.rubro-chip .rc-hint{font-size:10px;color:#7c8aa0;line-height:1.25;font-weight:600}
+.rubro-chip .rc-benef{font-size:10px;color:#1e3a5f;font-weight:800}
+.rubro-quitar{margin-top:8px;background:transparent;border:1px solid #e2e8f0;
+  border-radius:8px;padding:5px 10px;font-size:10.5px;font-weight:800;
+  color:#94a3b8;cursor:pointer;transition:all .15s;align-self:flex-start}
+.rubro-quitar:hover{border-color:#dc2626;color:#dc2626}
+
 /* ===== RESPONSIVE MÓVIL — no afecta el diseño de escritorio ===== */
 @media (max-width:760px){
   .screen{width:100%!important;padding:12px!important}
-  header{grid-template-columns:1fr!important;padding:16px!important;gap:12px!important}
+  header{padding:16px!important}
   h1{font-size:23px!important;line-height:1.12!important}
   .eyebrow{font-size:10px!important;margin-bottom:6px!important}
   header p{font-size:13.5px!important;line-height:1.4!important}
-  .header-badge{min-width:0!important;width:100%!important}
   .card{padding:14px!important;border-radius:16px!important}
   .grid-3,.grid-4,.grid-5,.grid-6{grid-template-columns:1fr!important;gap:10px!important}
   .dash{grid-template-columns:1fr!important;gap:10px!important}
   .compare-grid{grid-template-columns:1fr!important;gap:10px!important}
-  .top-cards-grid{grid-template-columns:1fr 1fr!important;gap:10px!important}
-  .card-mini{height:auto!important;min-height:78px!important;padding:12px 14px!important;border-radius:14px!important}
-  .card-name{font-size:13px!important}
   .print-consumption-grid{grid-template-columns:1fr!important}
   .section-title{flex-direction:column!important;align-items:flex-start!important;gap:6px!important;margin-bottom:14px!important}
   .section-title h2{font-size:17px!important;line-height:1.2!important}
@@ -965,11 +951,11 @@
   input,select{font-size:16px!important}
   .buttons{flex-wrap:wrap!important}
   .buttons button{flex:1 1 auto!important}
+  .card-pills{grid-template-columns:1fr!important}
   .detail-head,.detail-row{font-size:11px!important}
   .platinum-check-row,.mini-membership-row{grid-template-columns:1fr!important;gap:6px!important}
 }
 @media (max-width:430px){
-  .top-cards-grid{grid-template-columns:1fr!important}
   h1{font-size:21px!important}
   .section-title h2{font-size:16px!important}
 }
@@ -978,64 +964,21 @@
 </head>
 <body>
 <div class="screen">
-  <header><div><div class="eyebrow">Optimizador inteligente · Cashback</div><h1>Optimiza tus compras de supermercado</h1><p>Introduce tus consumos y el motor recomienda qué tarjetas usar para maximizar cashback líquido, beneficios acumulados y cashback anual neto.</p></div><div class="header-badge"><div class="rate">TARJETAS</div><div class="caption">recomendación automática<br>+ comparación alternativa</div></div></header>
+  <header><div><div class="eyebrow">Optimizador inteligente · Cashback</div><h1>Saber pagar maximiza tu cashback</h1><p>Esta herramienta compara hasta 6 tarjetas de crédito del mercado bancario en República Dominicana, y te dice con cuál pagar cada gasto para sacar el máximo cashback en supermercados y otros rubros. Más control financiero sobre algo que ya gastas.</p></div></header>
   
 <section class="card top-card-strip" style="padding:14px 18px">
   <div class="section-title" style="margin-bottom:10px">
-    <h2 style="font-size:18px">Tarjetas incluidas en el análisis</h2>
-    <p class="intro-line">Introduce solo consumos que considerarías pagar con alguna de estas tarjetas.</p>
+    <h2 style="font-size:18px">Tarjetas de bancos dominicanos incluidas en el análisis</h2>
+    
   </div>
 
-  <div class="top-cards-grid">
-
-    <div class="card-mini">
-      <div class="card-name">Bravo</div>
-      <div class="card-footer">
-        <span>Scotiabank</span>
-        <span>VISA</span>
-      </div>
-    </div>
-
-    <div class="card-mini">
-      <div class="card-name">Suma CCN</div>
-      <div class="card-footer">
-        <span>Scotiabank</span>
-        <span>AMEX</span>
-      </div>
-    </div>
-
-    <div class="card-mini">
-      <div class="card-name">La Sirena</div>
-      <div class="card-footer">
-        <span>APAP</span>
-        <span>VISA</span>
-      </div>
-    </div>
-
-    <div class="card-mini">
-      <div class="card-name">Supercashback</div>
-      <div class="card-footer">
-        <span>Banesco</span>
-        <span>VISA</span>
-      </div>
-    </div>
-
-    <div class="card-mini">
-      <div class="card-name">Plaza Lama</div>
-      <div class="card-footer">
-        <span>Promerica</span>
-        <span>VISA</span>
-      </div>
-    </div>
-
-    <div class="card-mini">
-      <div class="card-name">PriceSmart</div>
-      <div class="card-footer">
-        <span>Santa Cruz</span>
-        <span>VISA</span>
-      </div>
-    </div>
-
+  <div class="card-pills">
+    <div class="card-pill"><span class="cp-name">Bravo</span><span class="cp-meta">Scotiabank · VISA</span></div>
+    <div class="card-pill"><span class="cp-name">Suma CCN</span><span class="cp-meta">Scotiabank · AMEX</span></div>
+    <div class="card-pill"><span class="cp-name">La Sirena</span><span class="cp-meta">APAP · VISA</span></div>
+    <div class="card-pill"><span class="cp-name">Supercashback</span><span class="cp-meta">Banesco · VISA</span></div>
+    <div class="card-pill"><span class="cp-name">Plaza Lama</span><span class="cp-meta">Promerica · VISA</span></div>
+    <div class="card-pill"><span class="cp-name">PriceSmart</span><span class="cp-meta">Santa Cruz · VISA</span></div>
   </div>
 </section>
 
@@ -1044,22 +987,22 @@
   <strong>Aviso importante.</strong>
   Esta es una herramienta de modelaje orientativo. No es una recomendación financiera, comercial, legal ni contractual.
   Las condiciones de las tarjetas, porcentajes, MCC, comercios elegibles, topes, anualidades, membresías, tasas de cambio,
-  reglas de acumulación/redención y promociones pueden cambiar sin previo aviso. Verifica siempre con el banco, emisor,
-  PriceSmart y el comercio antes de tomar una decisión.
+  reglas de acumulación/redención y promociones pueden cambiar sin previo aviso. Verifica siempre con el banco emisor
+  y el comercio antes de tomar una decisión.
 </section>
 
   <div id="printSummary" class="print-summary"></div>
 
-  <main class="card"><div class="section-title"><h2>1. Introduce tus consumos mensuales</h2><p class="intro-line">Completa los montos aproximados. “Otros supermercados” se ajusta automáticamente según el total y los supermercados específicos.</p></div><div class="mother-row"><div><div class="mother-title">Gasto total mensual en supermercados</div><div class="mother-hint">La categoría “Otros supermercados” se calcula sola a medida que introduces Bravo, CCN, Sirena/Pola, Plaza Lama y PriceSmart.</div></div><input id="totalSupermercados" type="text" placeholder="0" inputmode="decimal"></div>
+  <main class="card"><div class="section-title"><h2>1. Cuéntame cómo compras y te digo cómo ganar más cashback</h2></div><div class="mother-row"><div><div class="mother-title">Empecemos por lo grande: ¿cuánto gastas al mes en supermercados?</div><div class="mother-hint">Escribe tu gasto total en el campo de esta sección. ¿No lo tienes claro? Tranquilo — sáltalo y ve directo a marcar más abajo dónde compras; el total se arma solo.</div></div><input id="totalSupermercados" type="text" placeholder="0" inputmode="decimal"></div><div id="totalAjusteAviso" class="total-ajuste-aviso" style="display:none">Total ajustado automáticamente: la suma de tus supermercados superó el monto que indicaste.</div>
 <div id="inputArea"></div></main>
 
   <section class="card"><div class="section-title"><h2>2. Tarjetas recomendadas para tus hábitos actuales</h2><p class="intro-line">La herramienta calcula qué tarjetas generan más cashback respetando dónde compras hoy.</p></div><div id="recommendedNames" class="benefit-list" style="margin-bottom:12px"></div><div id="dashboard" class="dash"></div><div class="buttons" style="margin-top:14px"><button id="toggleCardsBtn" class="secondary-btn" onclick="toggleCards()">Ver detalle por tarjeta</button><button id="toggleDetailBtn" class="secondary-btn" onclick="toggleDetalle()">Ver detalle por rubro</button></div><div id="cardsWrap" style="display:none;margin-top:18px"><div id="cardRecommendationGrid" class="rec-grid"></div></div><div id="detailWrap" style="display:none"><div id="detailTable" class="detail-table"></div></div></section>
 
-  <section class="card"><div class="section-title"><h2>3. Tu simulación alternativa</h2><p class="intro-line">Aquí puedes simular cómo sería tu cashback si prefieres usar otras tarjetas distintas a las recomendadas. El resultado se comparará más abajo con la estrategia óptima para tus hábitos actuales.</p></div><div id="manualCardGrid" class="grid-3"></div><div class="buttons" style="margin-top:14px"><button id="toggleManualBtn" class="secondary-btn" onclick="toggleManual()">Ver detalle de tu simulación</button></div><div id="manualCardsWrap" style="display:none"><div id="manualCardResultGrid" class="rec-grid" style="margin-top:14px"></div></div></section>
+  <section class="card"><div class="section-title"><h2>3. Tu simulación alternativa</h2><p class="intro-line">Marca abajo las tarjetas que tú elegirías. En la sección 4, justo debajo, verás cómo se comparan con la recomendación del motor. Prueba las combinaciones que quieras — cambiar la selección no rompe nada.</p></div><div id="manualCardGrid" class="grid-3"></div><div class="buttons" style="margin-top:14px"><button id="toggleManualBtn" class="secondary-btn" onclick="toggleManual()">Ver detalle de tu simulación</button></div><div id="manualCardsWrap" style="display:none"><div id="manualCardResultGrid" class="rec-grid" style="margin-top:14px"></div></div></section>
 
-  <section class="card"><div class="section-title"><h2>4. Comparación anual</h2><p class="intro-line">Compara la recomendación automática con la combinación de tarjetas que hayas simulado.</p></div><div id="comparisonBox" class="compare-grid"></div><div id="summaryText"></div></section>
+  <section class="card"><div class="section-title"><h2>4. Comparación anual</h2><p class="intro-line">Aquí está el momento de la verdad: lo que el motor recomienda, lado a lado con lo que tú elegiste. Mira la diferencia anual y decide con números, no a ojo.</p></div><div id="comparisonBox" class="compare-grid"></div><div id="summaryText"></div></section>
 
-  <section class="card"><div class="section-title"><h2>5. Escenario exploratorio cambiando hábitos de compra</h2><p class="intro-line">Este escenario es una simulación orientativa de redistribución de gasto. No debe interpretarse como una garantía de máximo matemático ni como recomendación de cambiar de comercio.</p></div><div id="maxScenario" class="reading-note" style="margin:0 0 14px;display:none"></div><div class="buttons" style="margin-top:0"><button id="toggleMaxBtn" class="secondary-btn" onclick="toggleMax()">Ver detalle escenario exploratorio</button></div><div id="maxCardsWrap" style="display:none;margin-top:14px"><div id="maxCardGrid" class="rec-grid"></div></div><div class="buttons"><button class="primary-btn" onclick="cargarEjemplo()">Cargar ejemplo</button><button class="secondary-btn" onclick="limpiarTodo()">Limpiar</button><button class="secondary-btn" onclick="window.print()">Imprimir / guardar PDF</button></div></section>
+  <section class="card"><div class="section-title"><h2>5. ¿Y si exprimieras todavía más?</h2><p class="intro-line">No queremos que cambies cómo compras. Solo mostrarte que el techo siempre se puede subir un poco más — pero nunca a costa de la tranquilidad de comprar donde de verdad quieres.</p></div><div id="maxScenario" class="reading-note" style="margin:0 0 14px;display:none"></div><div class="buttons" style="margin-top:0"><button id="toggleMaxBtn" class="secondary-btn" onclick="toggleMax()">Ver el detalle</button></div><div id="maxCardsWrap" style="display:none;margin-top:14px"><div id="maxCardGrid" class="rec-grid"></div></div><div class="buttons"><button class="primary-btn" onclick="cargarEjemplo()">Cargar ejemplo</button><button class="secondary-btn" onclick="limpiarTodo()">Limpiar</button><button class="secondary-btn" onclick="window.print()">Imprimir / guardar PDF</button></div></section>
 
   <footer>Datos verificados con la información pública de cada emisor en mayo de 2026. Los programas de cashback, porcentajes, topes, franquicias, anualidades y comercios elegibles pueden cambiar en cualquier momento sin previo aviso; antes de tomar cualquier decisión, confirma las condiciones vigentes directamente con el banco o emisor. El autor no se responsabiliza por cambios posteriores ni por diferencias entre lo modelado y las condiciones reales aplicadas por cada emisor. Cálculo referencial y aproximado. Esta herramienta es un modelo comparativo orientativo para estimar beneficios potenciales bajo supuestos simplificados. No constituye oferta, asesoría financiera, recomendación de contratación ni garantía de cashback. Las condiciones, porcentajes, topes, anualidades, cargos de emisión o renovación, membresías, beneficios acumulables, MCC, comercios elegibles, canales de compra, clasificación de transacciones, reglas de redención, vencimientos, promociones, impuestos, tasas de cambio y políticas de los emisores pueden cambiar sin previo aviso. Los beneficios acumulables específicos de tarjetas co-branded y SmartCash se consideran al 100% de su valor nominal para efectos del modelo, aunque su uso real puede depender de restricciones operativas, disponibilidad, vencimiento, consumo futuro en el establecimiento y reglas particulares de cada programa. Cuando existe consumo en PriceSmart, el modelo incorpora automáticamente la membresía Diamond por defecto. Si se selecciona Platinum, dicha membresía sustituye a Diamond y añade un 2% adicional sobre compras elegibles en PriceSmart. La tarjeta Supercashback considera una franquicia mensual de RD$3,000 en supermercados antes de generar cashback, según información confirmada por el emisor. El escenario exploratorio de cambio de hábitos es una simulación orientativa y no representa una optimización matemática exhaustiva ni garantiza viabilidad real de sustitución entre comercios. Los rubros de pago recurrente o factura única —como agua/luz, telecomunicaciones y streaming— se tratan como pagos no divisibles y se asignan a una sola tarjeta dentro del modelo. El modelo no incluye el 1% base universal de "resto de categorías": prácticamente toda tarjeta del mercado lo otorga de forma equivalente (acumulación general a razón de RD$100 = 1 punto canjeable por efectivo), por lo que no discrimina entre tarjetas ni aporta valor comparativo; sí se incluyen los beneficios acumulables específicos de tarjetas co-branded (Bravíssimo, Siremás, Lama Club y SmartCash), que sí son diferenciadores. Verifica siempre las condiciones vigentes con cada banco, emisor, comercio y programa antes de tomar decisiones.</footer>
 </div>
@@ -1122,10 +1065,57 @@ const tarjetas=[
 {id:'plazaLamaPromerica',nombre:'Plaza Lama · Promerica',anualidad:1000,beneficios:[{rubro:'plazaLama',rate:.09,tipo:'liquid',tope:7500,etiqueta:'9% Plaza Lama',nota:'Tope RD$7,500/mes'}],puntos:[{rubro:'plazaLama',rate:.01,tipoPunto:'restricted',programa:'lamaClub',etiqueta:'1% Lama Club'}]},
 {id:'pricesmartPopular',nombre:'PriceSmart · Santa Cruz',anualidad:1000,beneficios:[{rubro:'farmacias',rate:.03,tipo:'liquid',tope:2000,etiqueta:'3% farmacias',nota:'Farmacias nacionales'},{rubro:'gasolinaFinde',rate:.02,tipo:'liquid',topeGrupo:'psGasRest',etiqueta:'2% gasolina',nota:'Tope combinado gasolina/restaurantes'},{rubro:'gasolinaSemana',rate:.02,tipo:'liquid',topeGrupo:'psGasRest',etiqueta:'2% gasolina',nota:'Tope combinado gasolina/restaurantes'},{rubro:'restaurantes',rate:.02,tipo:'liquid',topeGrupo:'psGasRest',etiqueta:'2% restaurantes',nota:'Tope combinado gasolina/restaurantes'},{rubro:'pricesmart',rate:.02,tipo:'liquid',tope:Infinity,etiqueta:'2% Platinum PriceSmart',nota:'Beneficio adicional membresía Platinum',condition:'pricesmartPlatinum'}],gruposTope:{psGasRest:2000},puntos:[{rubro:'pricesmart',rate:.06,tipoPunto:'restricted',programa:'smartcash',tope:6000,etiqueta:'6% SmartCash PriceSmart',nota:'SmartCash restringido a PriceSmart; Supercashback no aplica en PriceSmart'}]}
 ];
-let estado={consumos:{},programas:{pricesmartPlatinum:false},manualCards:{},sirenaPlan:'digital',manualSirenaPlan:'digital',mostrarDetalle:false,mostrarCards:false,mostrarMax:false,mostrarManual:false};
+let estado={consumos:{},programas:{pricesmartPlatinum:false},manualCards:{},rubrosActivos:{},totalEscrito:0,sirenaPlan:'digital',manualSirenaPlan:'digital',mostrarDetalle:false,mostrarCards:false,mostrarMax:false,mostrarManual:false};
 const fmt=n=>'RD$'+new Intl.NumberFormat('en-US',{maximumFractionDigits:0}).format(Math.round(n||0));const raw=n=>new Intl.NumberFormat('en-US',{maximumFractionDigits:0}).format(Math.round(n||0));const num=s=>{let x=parseFloat(String(s||'').replace(/,/g,'').replace(/[^0-9.]/g,''));return Number.isFinite(x)&&x>0?x:0};const val=id=>num(estado.consumos[id]);const inp=id=>val(id)>0?raw(val(id)):'';const save=id=>{let e=document.getElementById(id);if(e)estado.consumos[id]=num(e.value)};
-function pintarInputs(){let t=document.getElementById('totalSupermercados');t.value=inp('totalSupermercados');t.oninput=()=>{save('totalSupermercados');calcResto();calcularYPintar()};t.onblur=e=>{save('totalSupermercados');e.target.value=inp('totalSupermercados');calcResto();calcularYPintar()};inputArea.innerHTML=inputGroups.map(g=>`<div class="subhead">${g.title}</div>${g.title==='Rubros estratégicos'?'<div class="reading-note input-warning" style="margin:0 0 12px;padding:12px 14px;font-size:13px"><strong>IMPORTANTE:</strong><br>Si normalmente usarías otra tarjeta para ese gasto, deja la celda en blanco.<br><span>La herramienta solo debe incluir consumos que realmente considerarías pagar con alguna de las tarjetas analizadas.</span></div>':''}<div class="${g.title==='Supermercados'?'grid-6':(g.title==='Rubros estratégicos'?'grid-4':(g.items.length>=5?'grid-5':'grid-3'))}">${g.items.map(s=>`<div class="input-card ${g.cls} active"><span class="name">${s.nombre}</span><span class="hint">${s.hint}</span>${s.benef?`<span class="benefit-hint">${s.benef}</span>`:''}<input id="${s.id}" type="text" placeholder="0" value="${inp(s.id)}" ${s.id==='otrosSuper'?'disabled':''}>${s.id==='otrosSuper'?`<div class="hint" style="margin-top:8px;color:#0f766e;font-weight:800">Cálculo automático</div>`:''}${s.membership?`<div class="mini-membership-row platinum-check-row"><span>Membresía</span><label class="platinum-inline"><input id="pricesmartPlatinumCheck" type="checkbox" ${estado.programas.pricesmartPlatinum?'checked':''}><span>Platinum</span></label><div class="membership-mini-note">Diamond por defecto. Marca Platinum si aplica.</div></div>`:''}</div>`).join('')}</div>`).join('');rubros.forEach(r=>{let i=document.getElementById(r.id);if(!i)return;i.oninput=()=>{save(r.id);calcResto();calcularYPintar()};i.onblur=e=>{save(r.id);e.target.value=inp(r.id);calcResto();calcularYPintar()}});let psChk=document.getElementById('pricesmartPlatinumCheck');if(psChk){psChk.onchange=e=>{estado.programas.pricesmartPlatinum=e.target.checked;calcularYPintar()}}}
-function calcResto(){let total=val('totalSupermercados'),det=['bravo','ccn','sirena','plazaLama','pricesmart'].reduce((s,id)=>s+val(id),0);estado.consumos.otrosSuper=Math.max(total-det,0);let el=document.getElementById('otrosSuper');if(el)el.value=inp('otrosSuper')}
+function pintarInputs(){let t=document.getElementById('totalSupermercados');t.value=inp('totalSupermercados');t.oninput=()=>{estado.totalEscrito=num(t.value);save('totalSupermercados');calcResto();calcularYPintar()};t.onblur=e=>{estado.totalEscrito=num(e.target.value);save('totalSupermercados');calcResto();e.target.value=inp('totalSupermercados');calcularYPintar()};
+function rubroAbierto(g,it){
+  if(it.id==='otrosSuper'){
+    if(estado.rubrosActivos['otrosSuper'])return true;
+    return num(estado.consumos.otrosSuper||0)>0;
+  }
+  if(estado.rubrosActivos[it.id])return true;
+  if(num(inp(it.id))>0){estado.rubrosActivos[it.id]=true;return true}
+  return false;
+}
+inputArea.innerHTML=inputGroups.map(g=>{let opcional=true;let abiertos=g.items.filter(it=>rubroAbierto(g,it));let cerrados=g.items.filter(it=>!rubroAbierto(g,it));
+let gridCls=g.title==='Supermercados'?'grid-6':(g.title==='Rubros estratégicos'?'grid-4':(g.items.length>=5?'grid-5':'grid-3'));
+let cardsAbiertas=abiertos.map(s=>{let otrosAuto=(s.id==='otrosSuper'&&!estado.rubrosActivos['otrosSuper']);
+return `<div class="input-card ${g.cls} active"><span class="name">${s.nombre}</span><span class="hint">${s.hint}</span>${s.benef?`<span class="benefit-hint">${s.benef}</span>`:''}<input id="${s.id}" type="text" placeholder="0" value="${inp(s.id)}" ${otrosAuto?'disabled':''}>${otrosAuto?`<div class="hint" style="margin-top:8px;color:#0f766e;font-weight:800">Cálculo automático — recoge lo no detallado</div>`:''}${s.membership?`<div class="mini-membership-row platinum-check-row"><span>Membresía</span><label class="platinum-inline"><input id="pricesmartPlatinumCheck" type="checkbox" ${estado.programas.pricesmartPlatinum?'checked':''}><span>Platinum</span></label></div>`:''}${(!otrosAuto)?`<button class="rubro-quitar" data-quitar="${s.id}">Quitar</button>`:''}</div>`;}).join('');
+let chipsCerrados=cerrados.length?`<div class="rubro-chips">${cerrados.map(s=>`<button class="rubro-chip" data-anadir="${s.id}"><span class="rc-head"><span class="rc-plus">+</span><span class="rc-name">${s.nombre}</span></span>${s.hint?`<span class="rc-hint">${s.hint}</span>`:''}<span class="rc-benef">${s.benef||''}</span></button>`).join('')}</div>`:'';
+let avisoEstrat=g.title==='Rubros estratégicos'?'<div class="reading-note input-warning" style="margin:0 0 12px;padding:12px 14px;font-size:13px"><strong>Ojo con esto 👀</strong><br>Marca un rubro solo si de verdad lo pagarías con una de las tarjetas del análisis. Si normalmente usas otra, déjalo fuera — así el cálculo es honesto y te sirve de verdad.<br><span>Y tranquilo: puedes añadir o quitar lo que quieras cuando quieras. Prueba combinaciones todas las veces que se te antoje, nada se rompe.</span></div>':'';
+let ayudaTxt=g.title==='Supermercados'?'👇 Marca los supermercados donde sueles comprar e introduce tu consumo mensual promedio en cada uno. Cada tarjeta del análisis está pensada para darte cashback en ellos.':(g.title==='Ecosistemas'?'¿Compras en tiendas hermanas de los supermercados? Si lo haces, añade esos consumos seleccionándolas a continuación. Todo suma cashback.':'Aquí van tus otros gastos del mes. Marca solo los que de verdad pagarías con estas tarjetas.');
+let ayudaOpc=cerrados.length?`<div class="rubro-ayuda">${ayudaTxt}</div>`:'';
+return `<div class="subhead">${g.title}</div>${avisoEstrat}${ayudaOpc}${cardsAbiertas?`<div class="${gridCls}">${cardsAbiertas}</div>`:''}${chipsCerrados}`;}).join('');
+
+rubros.forEach(r=>{let i=document.getElementById(r.id);if(!i)return;i.oninput=()=>{save(r.id);calcResto();calcularYPintar()};i.onblur=e=>{save(r.id);e.target.value=inp(r.id);calcResto();calcularYPintar()}});
+let psChk=document.getElementById('pricesmartPlatinumCheck');if(psChk){psChk.onchange=e=>{estado.programas.pricesmartPlatinum=e.target.checked;calcularYPintar()}}
+inputArea.querySelectorAll('[data-anadir]').forEach(b=>{b.onclick=()=>{estado.rubrosActivos[b.dataset.anadir]=true;calcResto();pintarInputs();let nv=document.getElementById(b.dataset.anadir);if(nv){nv.focus();nv.scrollIntoView({block:'center',behavior:'smooth'})}}});
+inputArea.querySelectorAll('[data-quitar]').forEach(b=>{b.onclick=()=>{let id=b.dataset.quitar;delete estado.rubrosActivos[id];estado.consumos[id]=0;save(id);calcResto();pintarInputs();calcularYPintar()}});
+}
+
+function calcResto(){
+  let escrito=num(estado.totalEscrito||0);
+  let det=['bravo','ccn','sirena','plazaLama','pricesmart'].reduce((s,id)=>s+val(id),0);
+  let otrosManual=estado.rubrosActivos['otrosSuper'];
+  if(otrosManual){
+    // El usuario seleccionó "Otros" y lo escribe a mano: cuenta como un parcial más.
+    let detTotal=det+val('otrosSuper');
+    estado.totalAjustado=(escrito>0&&detTotal>escrito);
+    estado.consumos.totalSupermercados=Math.max(escrito,detTotal);
+  } else {
+    // "Otros" automático: absorbe el residuo. El total nunca baja de la suma de parciales.
+    estado.totalAjustado=(escrito>0&&det>escrito);
+    let totalEfectivo=Math.max(escrito,det);
+    estado.consumos.totalSupermercados=totalEfectivo;
+    estado.consumos.otrosSuper=Math.max(totalEfectivo-det,0);
+  }
+  let elT=document.getElementById('totalSupermercados');
+  if(elT&&document.activeElement!==elT)elT.value=inp('totalSupermercados');
+  let el=document.getElementById('otrosSuper');
+  if(el&&!otrosManual)el.value=inp('otrosSuper');
+  let aviso=document.getElementById('totalAjusteAviso');
+  if(aviso)aviso.style.display=estado.totalAjustado?'block':'none';
+}
 
 function costoMembresiaPriceSmart(){
   if(val('pricesmart')<=0)return 0;
@@ -1265,13 +1255,21 @@ function cardsHTML(r){let data=resumenPorTarjeta(r);if(!data.length)return'<div 
 </div><div class="metric"><div class="label">Cashback anual neto</div><div class="value success">${fmt(c.neto)}</div></div><div class="use-list"><div class="small-label" style="margin-bottom:6px">Detalle mensual por rubro</div>${c.id==='supercashbackBanesco'?`<div class="franchise-note"><strong>Franquicia supermercados:</strong> los primeros RD$3,000 mensuales no generan cashback. La franquicia se aplica una sola vez a nivel tarjeta, no por comercio.</div>`:''}${c.usos.map(u=>`<div class="use-item"><div><strong>${u.rubro}</strong><br>${u.etiqueta} · ${fmt(u.consumo)} aplicado${u.points>0?' · beneficio acumulable incluido':''}</div><span>${fmt(u.liquid+(u.points||0))}</span></div>`).join('')}</div></div>`).join('')}
 function pintarDetalle(r){detailTable.innerHTML=`<div class="detail-head"><div>Rubro</div><div>Tarjeta</div><div>Detalle</div><div>Cashback</div><div>Puntos</div></div>${r.rows.map(row=>`<div class="detail-row"><div><strong>${row.rubro}</strong><div class="note">Consumo: ${fmt(row.consumoTotal)}${row.consumoPendiente>0?` · Sin asignar: ${fmt(row.consumoPendiente)}`:''}</div></div><div>${row.asignaciones.map(a=>`<div class="subline"><strong>${a.tarjeta}</strong></div>`).join('')}</div><div>${row.asignaciones.map(a=>`<div class="subline">${a.etiqueta}<div class="note">${fmt(a.consumo)} aplicado · ${a.nota}</div></div>`).join('')}</div><div class="money">${row.asignaciones.map(a=>`<div class="subline">${fmt(a.liquid)}</div>`).join('')}</div><div class="points">${row.asignaciones.map(a=>`<div class="subline">${a.points==null?'<span class="na">N/A</span>':fmt(a.points)}</div>`).join('')}</div></div>`).join('')}`}
 function aportePotencialTarjeta(t){let plan=t.id==='sirenaAPAP'?mejorPlanSirena([t]):estado.manualSirenaPlan;let r=optimizar([t],programAuto(),plan,false);return {valor:r.mensualTotal,plan}}function pintarManual(){let manualActual=manual(),aportes={};resumenPorTarjeta(manualActual).forEach(c=>aportes[c.id]=c);manualCardGrid.innerHTML=tarjetas.filter(t=>!t.soloSi).map(t=>{let active=estado.manualCards[t.id],pot=aportePotencialTarjeta(t),aporte=aportes[t.id],aporteActual=(aporte?.liquid||0)+(aporte?.points||0),pills=beneficios(t,pot.plan,programAuto()).slice(0,4).map(b=>`<span class="pill liquid">${b.etiqueta}</span>`).join('');let planLine=t.id==='sirenaAPAP'?`<div class="metric"><div class="label">${active?'Plan seleccionado':'Mejor plan individual'}</div><div class="value">${(active?estado.manualSirenaPlan:pot.plan).charAt(0).toUpperCase()+(active?estado.manualSirenaPlan:pot.plan).slice(1)}</div></div>${active?`<select id="manualSirenaPlanSelect" style="margin-top:8px;text-align:left;font-weight:800"><option value="digital" ${estado.manualSirenaPlan==='digital'?'selected':''}>Plan Digital · Streaming 2%</option><option value="estilo" ${estado.manualSirenaPlan==='estilo'?'selected':''}>Plan Estilo · Estética/Spa 2%</option><option value="hogar" ${estado.manualSirenaPlan==='hogar'?'selected':''}>Plan Hogar · Telecom 2%</option></select>`:''}`:'';return`<div class="manual-card ${active?'active':''}"><label class="check-row"><input id="manual-${t.id}" type="checkbox" ${active?'checked':''}><span><span class="name">${t.nombre}</span><span class="hint">Anualidad ${fmt(t.anualidad)}</span></span></label>${active?`<div class="metric"><div class="label">Aporte mensual en tu elección</div><div class="value success">${fmt(aporteActual)}</div></div>`:`<div class="metric"><div class="label">Aporte individual estimado</div><div class="value success">${fmt(pot.valor)}</div></div>`}${planLine}<div class="benefit-list">${pills}${(t.puntos||[]).map(p=>`<span class="pill points">${p.etiqueta}</span>`).join('')}</div></div>`}).join('');tarjetas.filter(t=>!t.soloSi).forEach(t=>document.getElementById(`manual-${t.id}`).onchange=e=>{estado.manualCards[t.id]=e.target.checked;calcularYPintar()});let planSel=document.getElementById('manualSirenaPlanSelect');if(planSel)planSel.onchange=e=>{estado.manualSirenaPlan=e.target.value;calcularYPintar()}}
-function pintarComparacion(o,m){let d=m.anualAjustado-o.anualAjustado;let perdida=Math.abs(d);let lectura=d>=0?'Tu simulación iguala o supera la recomendación.':(perdida<3000?`Sacrifica valor, pero apenas son ${fmt(perdida/12)} al mes y ${fmt(perdida)} al año. Considera si la menor complejidad compensa ese monto.`:`Tu simulación sacrifica ${fmt(perdida/12)} al mes y ${fmt(perdida)} al año frente a la recomendación.`);comparisonBox.innerHTML=`<div class="summary-card"><h3>Recomendación automática</h3><div class="big good">${fmt(o.anualAjustado)}</div><div class="hint">cashback anual neto con tus hábitos actuales</div><div class="summary-line"><strong>Cashback anual</strong><span>${fmt(o.liquidTotal*12)}</span></div><div class="summary-line"><strong>Beneficio acumulable anual</strong><span>${fmt(o.pointsTotal*12)}</span></div><div class="summary-line cost-line"><strong>Anualidades</strong><span>-${fmt(o.anualidades)}</span></div></div><div class="summary-card"><h3>Tu simulación</h3><div class="big">${fmt(m.anualAjustado)}</div><div class="hint">cashback anual neto estimado</div><div class="summary-line"><strong>Cashback anual</strong><span>${fmt(m.liquidTotal*12)}</span></div><div class="summary-line"><strong>Beneficio acumulable anual</strong><span>${fmt(m.pointsTotal*12)}</span></div><div class="summary-line cost-line"><strong>Anualidades</strong><span>-${fmt(m.anualidades)}</span></div></div><div class="summary-card"><h3>Diferencia anual</h3><div class="big ${d>=0?'good':'bad'}">${d>=0?'+':''}${fmt(d)}</div><div class="hint">frente a la recomendación automática</div><div class="summary-line"><strong>Diferencia mensual aprox.</strong><span>${d>=0?'+':''}${fmt(d/12)}</span></div><div class="summary-line"><strong>Lectura</strong><span>${lectura}</span></div></div>`}
-function pintarResumenTexto(o,m){let d=m.anualAjustado-o.anualAjustado;let cards=[...o.tarjetasUsadas].map(id=>(tarjetas.find(t=>t.id===id)||{}).nombre).filter(Boolean);let top=resumenPorTarjeta(o)[0];summaryText.innerHTML=`<div class="reading-note"><strong>Resumen ejecutivo.</strong> La herramienta ha seleccionado ${cards.length} tarjetas porque, combinadas, son las que mejor aprovechan tus consumos mensuales, topes de cashback y anualidades. La tarjeta con mayor impacto es <strong>${top?.nombre||'N/A'}</strong>. ${d>=0?`Tu selección alternativa mejora el resultado automático en ${fmt(Math.abs(d))} anuales.`:`Tu selección alternativa genera aproximadamente ${fmt(Math.abs(d))} menos al año frente a la estrategia optimizada.`}</div>`}
-function pintarMaxScenario(o){let mx=optimizacionMaxSupermercados(),box=document.getElementById('maxScenario');if(!box||!mx){if(box)box.style.display='none';return null}let m=manual();let diffMax=mx.result.anualAjustado-o.anualAjustado;let diffManual=m.anualAjustado-o.anualAjustado;let lineas=mx.plan.map(p=>`<div class="summary-line"><strong>${p.nombre}</strong><span>${fmt(p.monto)} · ${p.tarjeta}</span></div>`).join('');box.style.display='block';box.innerHTML=`<strong>Escenario exploratorio de supermercados.</strong><div class="nota-metodologica-escenario5"><strong>Nota metodológica:</strong> este escenario usa una redistribución orientativa del gasto. La recomendación automática principal sí usa el motor completo con topes, anualidades, franquicia y beneficios acumulables.</div> Este escenario estima de forma orientativa cuánto podrías generar si, además de elegir bien las tarjetas, redistribuyeras tu gasto total de supermercados (${fmt(mx.total)}) hacia comercios con mayor devolución y mejores topes disponibles. No es una optimización matemática exhaustiva de hábitos reales.<div class="compare-grid" style="margin-top:14px"><div class="summary-card"><h3>Tu simulación</h3><div class="big">${fmt(m.anualAjustado)}</div><div class="hint">cashback anual neto</div><div class="summary-line"><strong>Vs recomendación</strong><span>${diffManual>=0?'+':''}${fmt(diffManual)}</span></div></div><div class="summary-card"><h3>Recomendación actual</h3><div class="big good">${fmt(o.anualAjustado)}</div><div class="hint">respetando tus hábitos actuales</div><div class="summary-line"><strong>Vs tu simulación</strong><span>${(o.anualAjustado-m.anualAjustado)>=0?'+':''}${fmt(o.anualAjustado-m.anualAjustado)}</span></div></div><div class="summary-card" style="border-color:rgba(15,159,98,.45);background:#f0fdf4"><h3>Estimación cambiando hábitos</h3><div class="big good">${fmt(mx.result.anualAjustado)}</div><div class="hint">redistribución orientativa</div><div class="summary-line"><strong>Vs recomendación actual</strong><span>${diffMax>=0?'+':''}${fmt(diffMax)}</span></div><div class="summary-line"><strong>Vs tu simulación</strong><span>${(mx.result.anualAjustado-m.anualAjustado)>=0?'+':''}${fmt(mx.result.anualAjustado-m.anualAjustado)}</span></div><div class="summary-line"><strong>Adicional mensual vs recomendación</strong><span>${diffMax>=0?'+':''}${fmt(diffMax/12)}</span></div><div style="margin-top:10px">${lineas}</div></div></div>`;let wrap=document.getElementById('maxCardsWrap'),btn=document.getElementById('toggleMaxBtn'),grid=document.getElementById('maxCardGrid');if(grid)grid.innerHTML=cardsHTML(mx.result);if(wrap)wrap.style.display=estado.mostrarMax?'block':'none';if(btn)btn.textContent=estado.mostrarMax?'Ocultar detalle escenario exploratorio':'Ver detalle escenario exploratorio';return mx}
+function pintarComparacion(o,m){
+  let simVacia=!m||!m.tarjetasUsadas||m.tarjetasUsadas.size===0;
+  if(simVacia){
+    comparisonBox.innerHTML=`<div class="summary-card"><h3>Recomendación automática</h3><div class="big good">${fmt(o.anualAjustado)}</div><div class="hint">cashback anual neto con tus hábitos actuales</div><div class="summary-line"><strong>Cashback anual</strong><span>${fmt(o.liquidTotal*12)}</span></div><div class="summary-line"><strong>Beneficio acumulable anual</strong><span>${fmt(o.pointsTotal*12)}</span></div><div class="summary-line cost-line"><strong>Anualidades</strong><span>-${fmt(o.anualidades)}</span></div></div><div class="summary-card sim-vacia"><h3>Tu simulación</h3><div class="sim-vacia-msg">Todavía no has armado tu propia combinación. Marca las tarjetas que quieras probar en la sección 3 y aquí verás cómo se compara con la recomendación.</div></div><div class="summary-card sim-vacia"><h3>Diferencia anual</h3><div class="sim-vacia-msg">La comparación aparece cuando elijas al menos una tarjeta arriba.</div></div>`;
+    return;
+  }
+  let d=m.anualAjustado-o.anualAjustado;let perdida=Math.abs(d);let lectura=d>=0?'Tu simulación iguala o supera la recomendación.':(perdida<3000?`Sacrifica valor, pero apenas son ${fmt(perdida/12)} al mes y ${fmt(perdida)} al año. Considera si la menor complejidad compensa ese monto.`:`Tu simulación sacrifica ${fmt(perdida/12)} al mes y ${fmt(perdida)} al año frente a la recomendación.`);comparisonBox.innerHTML=`<div class="summary-card"><h3>Recomendación automática</h3><div class="big good">${fmt(o.anualAjustado)}</div><div class="hint">cashback anual neto con tus hábitos actuales</div><div class="summary-line"><strong>Cashback anual</strong><span>${fmt(o.liquidTotal*12)}</span></div><div class="summary-line"><strong>Beneficio acumulable anual</strong><span>${fmt(o.pointsTotal*12)}</span></div><div class="summary-line cost-line"><strong>Anualidades</strong><span>-${fmt(o.anualidades)}</span></div></div><div class="summary-card"><h3>Tu simulación</h3><div class="big">${fmt(m.anualAjustado)}</div><div class="hint">cashback anual neto estimado</div><div class="summary-line"><strong>Cashback anual</strong><span>${fmt(m.liquidTotal*12)}</span></div><div class="summary-line"><strong>Beneficio acumulable anual</strong><span>${fmt(m.pointsTotal*12)}</span></div><div class="summary-line cost-line"><strong>Anualidades</strong><span>-${fmt(m.anualidades)}</span></div></div><div class="summary-card"><h3>Diferencia anual</h3><div class="big ${d>=0?'good':'bad'}">${d>=0?'+':''}${fmt(d)}</div><div class="hint">frente a la recomendación automática</div><div class="summary-line"><strong>Diferencia mensual aprox.</strong><span>${d>=0?'+':''}${fmt(d/12)}</span></div><div class="summary-line"><strong>Lectura</strong><span>${lectura}</span></div></div>`;
+}
+
+function pintarResumenTexto(o,m){let simVacia=!m||!m.tarjetasUsadas||m.tarjetasUsadas.size===0;let d=simVacia?0:m.anualAjustado-o.anualAjustado;let cards=[...o.tarjetasUsadas].map(id=>(tarjetas.find(t=>t.id===id)||{}).nombre).filter(Boolean);let top=resumenPorTarjeta(o)[0];let invita=' Y recuerda: puedes cambiar tu selección en la sección 3 las veces que quieras y ver al instante cómo cambia todo.';let cierre=simVacia?'Si quieres, prueba tu propia combinación en la sección 3 y compárala con esta.':((d>=0?`Tu selección alternativa mejora el resultado automático en ${fmt(Math.abs(d))} anuales.`:`Tu selección alternativa genera aproximadamente ${fmt(Math.abs(d))} menos al año frente a la estrategia optimizada.`)+invita);summaryText.innerHTML=`<div class="reading-note"><strong>En resumen.</strong> El motor eligió ${cards.length} tarjetas porque, combinadas, son las que mejor exprimen tus consumos del mes, los topes de cashback y las anualidades. La de mayor impacto es <strong>${top?.nombre||'N/A'}</strong>. ${cierre}</div>`}
+function pintarMaxScenario(o){let mx=optimizacionMaxSupermercados(),box=document.getElementById('maxScenario');if(!box||!mx){if(box)box.style.display='none';return null}let m=manual();let diffMax=mx.result.anualAjustado-o.anualAjustado;let diffManual=m.anualAjustado-o.anualAjustado;let lineas=mx.plan.map(p=>`<div class="summary-line"><strong>${p.nombre}</strong><span>${fmt(p.monto)} · ${p.tarjeta}</span></div>`).join('');box.style.display='block';box.innerHTML=`<strong>Si movieras tu gasto de supermercados...</strong><div class="nota-metodologica-escenario5"><strong>Cómo leer esto:</strong> es un cálculo de "y si" — reparte tus ${fmt(mx.total)} de supermercados hacia las opciones de mayor devolución. La recomendación de arriba sí es tu estrategia real; esto es solo el techo teórico.</div><div class="compare-grid" style="margin-top:14px"><div class="summary-card"><h3>Tu simulación</h3><div class="big">${fmt(m.anualAjustado)}</div><div class="hint">cashback anual neto</div><div class="summary-line"><strong>Vs recomendación</strong><span>${diffManual>=0?'+':''}${fmt(diffManual)}</span></div></div><div class="summary-card"><h3>Recomendación actual</h3><div class="big good">${fmt(o.anualAjustado)}</div><div class="hint">respetando tus hábitos actuales</div><div class="summary-line"><strong>Vs tu simulación</strong><span>${(o.anualAjustado-m.anualAjustado)>=0?'+':''}${fmt(o.anualAjustado-m.anualAjustado)}</span></div></div><div class="summary-card" style="border-color:rgba(15,159,98,.45);background:#f0fdf4"><h3>Estimación cambiando hábitos</h3><div class="big good">${fmt(mx.result.anualAjustado)}</div><div class="hint">redistribución orientativa</div><div class="summary-line"><strong>Vs recomendación actual</strong><span>${diffMax>=0?'+':''}${fmt(diffMax)}</span></div><div class="summary-line"><strong>Vs tu simulación</strong><span>${(mx.result.anualAjustado-m.anualAjustado)>=0?'+':''}${fmt(mx.result.anualAjustado-m.anualAjustado)}</span></div><div class="summary-line"><strong>Adicional mensual vs recomendación</strong><span>${diffMax>=0?'+':''}${fmt(diffMax/12)}</span></div><div style="margin-top:10px">${lineas}</div></div></div>`;let wrap=document.getElementById('maxCardsWrap'),btn=document.getElementById('toggleMaxBtn'),grid=document.getElementById('maxCardGrid');if(grid)grid.innerHTML=cardsHTML(mx.result);if(wrap)wrap.style.display=estado.mostrarMax?'block':'none';if(btn)btn.textContent=estado.mostrarMax?'Ocultar detalle escenario exploratorio':'Ver el detalle';return mx}
 function toggleDetalle(){estado.mostrarDetalle=!estado.mostrarDetalle;calcularYPintar()}function toggleCards(){estado.mostrarCards=!estado.mostrarCards;calcularYPintar()}function toggleMax(){estado.mostrarMax=!estado.mostrarMax;calcularYPintar()}function toggleManual(){estado.mostrarManual=!estado.mostrarManual;calcularYPintar()}function pintarNombresRecomendados(o){let names=[...o.tarjetasUsadas].map(id=>(tarjetas.find(t=>t.id===id)||{}).nombre).filter(Boolean);recommendedNames.innerHTML=names.length?names.map(n=>`<span class="pill liquid"><strong>${n}</strong></span>`).join(''):'<span class="hint">Introduce consumos para ver la recomendación.</span>'}
 function actualizarDesplegables(){cardsWrap.style.display=estado.mostrarCards?'block':'none';detailWrap.style.display=estado.mostrarDetalle?'block':'none';toggleCardsBtn.textContent=estado.mostrarCards?'Ocultar detalle por tarjeta':'Ver detalle por tarjeta';toggleDetailBtn.textContent=estado.mostrarDetalle?'Ocultar detalle por rubro':'Ver detalle por rubro'}function pintarPrintSummary(){let items=[['Total supermercados','totalSupermercados'],['Bravo / BravoVA','bravo'],['Nacional / Jumbo','ccn'],['Sirena / Pola','sirena'],['Plaza Lama','plazaLama'],['PriceSmart','pricesmart'],['Otros supermercados','otrosSuper'],['Ecosistema Bravo','bravoEco'],['Ecosistema CCN','ccnEco'],['Ecosistema Sirena','sirenaEco'],['Gasolina fin de semana','gasolinaFinde'],['Gasolina entre semana','gasolinaSemana'],['Agua y luz','aguaLuz'],['Telecomunicaciones','telecom'],['Streaming','streaming'],['Uber / movilidad','uber'],['Salones / barberías','estiloPersonal'],['Centros estética / Spa','bellezaSpa'],['Farmacias','farmacias'],['Salud','salud'],['Veterinarias','veterinarias'],['Restaurantes','restaurantes'],['Comida rápida','comidaRapida']];let html=items.filter(([_,id])=>val(id)>0).map(([label,id])=>`<div class="print-consumption-item"><strong>${label}</strong><span>${fmt(val(id))}</span></div>`).join('');printSummary.innerHTML=`<h3>Consumos introducidos</h3><div class="print-consumption-grid">${html||'<div class="hint">Sin consumos introducidos.</div>'}${estado.programas.pricesmartPlatinum?'<div class="print-consumption-item"><strong>PriceSmart Platinum</strong><span>Activo</span></div>':''}</div>`}
 function calcularYPintar(){calcResto();let o=recomendada(),m=manual();pintarDashboard(o);pintarNombresRecomendados(o);cardRecommendationGrid.innerHTML=cardsHTML(o);pintarDetalle(o);actualizarDesplegables();pintarManual();manualCardResultGrid.innerHTML=cardsHTML(m);manualCardsWrap.style.display=estado.mostrarManual?'block':'none';toggleManualBtn.textContent=estado.mostrarManual?'Ocultar detalle de tu simulación':'Ver detalle de tu simulación';pintarComparacion(o,m);pintarResumenTexto(o,m);pintarMaxScenario(o);pintarPrintSummary()}function refrescarUI(){pintarInputs();calcularYPintar()}
-function cargarEjemplo(){estado.programas={pricesmartPlatinum:false};estado.manualCards={supercashbackBanesco:true,bravoScotia:true,ccnScotia:true};estado.mostrarDetalle=false;estado.mostrarCards=false;estado.mostrarMax=false;estado.mostrarManual=false;estado.consumos={totalSupermercados:32000,bravo:12000,ccn:14000,sirena:0,plazaLama:0,pricesmart:0,bravoEco:0,ccnEco:2000,sirenaEco:0,gasolinaFinde:4000,gasolinaSemana:6000,aguaLuz:4500,telecom:0,streaming:1200,uber:0,estiloPersonal:0,bellezaSpa:0,farmacias:2000,salud:0,veterinarias:0,restaurantes:0,comidaRapida:0};calcResto();refrescarUI()}function limpiarTodo(){estado={consumos:{},programas:{pricesmartPlatinum:false},manualCards:{},sirenaPlan:'digital',manualSirenaPlan:'digital',mostrarDetalle:false,mostrarCards:false,mostrarMax:false,mostrarManual:false};refrescarUI()}refrescarUI();
+function cargarEjemplo(){estado.programas={pricesmartPlatinum:false};estado.manualCards={supercashbackBanesco:true,bravoScotia:true,ccnScotia:true};estado.rubrosActivos={};estado.totalEscrito=32000;estado.mostrarDetalle=false;estado.mostrarCards=false;estado.mostrarMax=false;estado.mostrarManual=false;estado.consumos={totalSupermercados:32000,bravo:12000,ccn:14000,sirena:0,plazaLama:0,pricesmart:0,bravoEco:0,ccnEco:2000,sirenaEco:0,gasolinaFinde:4000,gasolinaSemana:6000,aguaLuz:4500,telecom:0,streaming:1200,uber:0,estiloPersonal:0,bellezaSpa:0,farmacias:2000,salud:0,veterinarias:0,restaurantes:0,comidaRapida:0};calcResto();refrescarUI()}function limpiarTodo(){estado={consumos:{},programas:{pricesmartPlatinum:false},manualCards:{},rubrosActivos:{},totalEscrito:0,sirenaPlan:'digital',manualSirenaPlan:'digital',mostrarDetalle:false,mostrarCards:false,mostrarMax:false,mostrarManual:false};refrescarUI()}refrescarUI();
 </script>
 </body>
 </html>
